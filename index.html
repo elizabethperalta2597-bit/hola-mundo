@@ -5,34 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hola mundo</title>
   <style>
+    :root {
+      --fondo-oscuro: #0b1f2a;
+      --fondo-claro: #17414f;
+      --acento: #4fd1c5;
+      --texto: #e6f1f2;
+      --texto-suave: #9bb5ba;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(160deg, var(--fondo-oscuro), var(--fondo-claro));
+      color: var(--texto);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
     }
+
     .tarjeta {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-left: 6px solid var(--acento);
+      max-width: 520px;
+      width: 100%;
+      padding: 40px 36px;
+      border-radius: 10px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     }
+
+    .etiqueta {
+      color: var(--acento);
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin: 0 0 12px 0;
+    }
+
     h1 {
-      color: #333333;
+      font-size: 2.6rem;
+      margin: 0 0 12px 0;
     }
-    p {
-      color: #666666;
+
+    .descripcion {
+      color: var(--texto-suave);
+      line-height: 1.6;
+      margin: 0 0 28px 0;
+    }
+
+    .datos {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .datos li {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.95rem;
+    }
+
+    .datos span:first-child {
+      color: var(--texto-suave);
+    }
+
+    .datos span:last-child {
+      color: var(--acento);
+    }
+
+    .enlace {
+      display: inline-block;
+      color: var(--acento);
+      text-decoration: none;
+      border: 2px solid var(--acento);
+      padding: 10px 24px;
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .enlace:hover {
+      background-color: var(--acento);
+      color: var(--fondo-oscuro);
     }
   </style>
 </head>
 <body>
   <div class="tarjeta">
+    <p class="etiqueta">Practica 3</p>
     <h1>Hola mundo</h1>
-     <p>Pagina desplegada con GitHub Pages - actualizada automaticamente</p>
+    <p class="descripcion">Pagina web publicada automaticamente desde un repositorio de GitHub.</p>
+    <ul class="datos">
+      <li><span>Hosting</span><span>GitHub Pages</span></li>
+      <li><span>Rama</span><span>main</span></li>
+      <li><span>Despliegue</span><span>Automatico</span></li>
+    </ul>
+    <a class="enlace" href="https://github.com/elizabethperalta2597-bit/hola-mundo">Ver repositorio</a>
   </div>
 </body>
 </html>
